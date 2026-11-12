@@ -349,3 +349,13 @@ main > h3 {
     padding: 14px 18px;
     margin-bottom: 20px;
 }
+
+
+.mensaje-flash {
+    background-color: #1c1c1c;
+    color: #7bd88f;
+    border: 1px solid #347a45;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+}

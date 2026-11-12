@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-11-2026 a las 22:42:03
+-- Tiempo de generación: 13-11-2026 a las 00:39:26
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -118,7 +118,8 @@ INSERT INTO `usuarios` (`id_usuario`, `nombre`, `email`, `password`, `rol`) VALU
 (3, 'juan', 'juancarlos@gmail.com', '$2y$10$XsPSTSXncgZwnQwCU9DOmuOQjEGDpS31WNptZi0HmDunlOn.UzRI2', 'usuario'),
 (4, 'pedro', 'pedro@gmail.com', '$2y$10$L.P6ht88FigrpJLGivf4x.bzP5JHjWWQblrJ25ddO/gq88JpqDDOa', 'usuario'),
 (5, 'estebanquito', 'esteban@gmail.com', '$2y$10$mofFmdWo5AVEmWZ9n/rY1ObWiwDCMO7x1XGUk0Mfx1RI6U8sOaT9u', 'usuario'),
-(6, 'juanpacopedro', 'juan@gmail.com', '$2y$10$AkgI.REBXCbHWw6hGgxh/eQ7N6SR.gh/KNFgMd8mMLF22Xv0pOZBe', 'usuario');
+(6, 'juanpacopedro', 'juan@gmail.com', '$2y$10$AkgI.REBXCbHWw6hGgxh/eQ7N6SR.gh/KNFgMd8mMLF22Xv0pOZBe', 'usuario'),
+(7, 'estebanquitooo', 'estebannn@gmail.com', '$2y$10$UyVuxcU1biC9cN3LvovLG.LRM86FxnRrlbkhZZu0BhReaIqNiijrC', 'usuario');
 
 --
 -- Índices para tablas volcadas
@@ -179,7 +180,7 @@ ALTER TABLE `publicaciones`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Restricciones para tablas volcadas

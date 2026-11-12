@@ -5,6 +5,7 @@
 session_start();
 
 require_once 'conn.php';
+require_once 'componentes/flash.php';
 
 
 $categoriaGuardada = $_COOKIE['ultima_categoria'] ?? '';
@@ -66,6 +67,7 @@ $resultado = mysqli_stmt_get_result($stmt);
 <?php require_once 'componentes/header.php'; ?>
 
 
+
     <?php if (isset($_GET['publicacion']) && $_GET['publicacion'] == 'creada'): ?>
     <p class="mensaje-exito">
         ¡Publicación creada correctamente! Ya está disponible en DevForum.
@@ -77,6 +79,7 @@ $resultado = mysqli_stmt_get_result($stmt);
 
 
     <main>
+        <?php mostrarFlash(); ?>
 
         
         <section class="bienvenida">

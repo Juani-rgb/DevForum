@@ -4,6 +4,7 @@ session_start();
 
 
 require_once 'conn.php';
+require_once 'componentes/flash.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -47,6 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $_SESSION["nombre"] = $usuario["nombre"];
     $_SESSION["rol"] = $usuario["rol"];
 
+    guardarFlash("¡Bienvenido a DevForum!");
     header("Location: index.php");
     exit;
 
@@ -68,6 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <?php require_once 'componentes/header.php'; ?>
 
    <main>
+    <?php mostrarFlash(); ?>
 
     <section class="formulario-contenedor">
 

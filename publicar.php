@@ -3,6 +3,7 @@
 session_start();
 
 require_once 'conn.php';
+require_once 'componentes/flash.php';
 
 if (!isset($_SESSION["id_usuario"])) {
 
@@ -41,12 +42,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $categoria
     );
 
-   if (mysqli_stmt_execute($stmt)) {
-    header("Location: index.php?publicacion=creada");
+  if (mysqli_stmt_execute($stmt)) {
+    guardarFlash("¡Publicación creada correctamente!");
+    header("Location: index.php");
     exit;
-    } else {
-        echo "Error al crear la publicación.";
-        }   
+} else {
+    echo "Error al crear la publicación.";
+}  
 
 }
 
@@ -55,6 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 <?php require_once 'componentes/header.php'; ?>
+
 
    <main>
 

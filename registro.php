@@ -4,6 +4,7 @@
 session_start();
 
 require_once 'conn.php';
+require_once 'componentes/flash.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -43,12 +44,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     mysqli_stmt_bind_param($stmt, "ssss", $nombre, $email, $passwordHash, $rol);
 
     if (mysqli_stmt_execute($stmt)) {
+    guardarFlash("¡Cuenta creada correctamente! Ahora podés iniciar sesión.");
     header("Location: login.php");
     exit;
-} else {
+    } else {
     echo "Error al registrar el usuario.";
-}
     }
+        }
 
 }
 
@@ -57,6 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 <?php require_once 'componentes/header.php'; ?>
+
 
    <main>
 

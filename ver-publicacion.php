@@ -4,6 +4,7 @@
 session_start();
 
 require_once 'conn.php';
+require_once 'componentes/flash.php';
 
 
 $id = $_GET['id'] ?? '';
@@ -63,12 +64,11 @@ if ($publicacion && $_SERVER["REQUEST_METHOD"] == "POST") {
 
         mysqli_stmt_bind_param($stmtComentario, "sii", $contenido, $id_usuario, $id);
 
-        if (mysqli_stmt_execute($stmtComentario)) {
-
-            header("Location: ver-publicacion.php?id=" . $id);
-            exit;
-
-        } else {
+       if (mysqli_stmt_execute($stmtComentario)) {
+    guardarFlash("¡Comentario publicado correctamente!");
+    header("Location: ver-publicacion.php?id=" . $id);
+    exit;
+    }   else {
 
             $errorComentario = "No se pudo publicar el comentario.";
 
@@ -105,7 +105,9 @@ if ($publicacion) {
 
 <?php require_once 'componentes/header.php'; ?>
 
+
     <main>
+        <?php mostrarFlash(); ?>
 
         <?php if ($publicacion): ?>
 
