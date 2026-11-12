@@ -1,0 +1,351 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    color: #eeeeee;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #1c1c1c;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+}
+
+header h1 {
+    color: #4da6ff;
+}
+
+nav a {
+    color: #eeeeee;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+nav a:hover {
+    color: #4da6ff;
+}
+
+main {
+    width: 80%;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.bienvenida {
+    margin-bottom: 35px;
+}
+
+.bienvenida h2 {
+    margin-bottom: 10px;
+}
+
+.bienvenida p {
+    color: #aaaaaa;
+}
+
+.contenido h2 {
+    margin-bottom: 20px;
+}
+
+.publicacion {
+    background-color: #1c1c1c;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.categoria {
+    color: #4da6ff;
+    font-size: 13px;
+}
+
+.publicacion h2 {
+    margin: 12px 0;
+}
+
+.publicacion p {
+    color: #bbbbbb;
+    margin-bottom: 15px;
+}
+
+.publicacion small {
+    color: #888888;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #888888;
+    border-top: 1px solid #333;
+}
+
+
+.herramientas {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.herramientas input,
+.herramientas select {
+    background-color: #1c1c1c;
+    color: #eeeeee;
+    border: 1px solid #444;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 14px;
+}
+
+.herramientas input {
+    flex: 1;
+}
+
+.herramientas select {
+    width: 220px;
+}
+
+.crear-publicacion {
+    margin-bottom: 30px;
+    text-align: right;
+}
+
+.crear-publicacion button {
+    background-color: #2878c7;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 18px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.crear-publicacion button:hover {
+    background-color: #1d5f9e;
+}
+
+
+.informacion-publicacion {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+    color: #888888;
+}
+
+.ver-publicacion {
+    color: #4da6ff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.ver-publicacion:hover {
+    text-decoration: underline;
+}
+
+.formulario-contenedor {
+    max-width: 450px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #1c1c1c;
+    border: 1px solid #333;
+    border-radius: 8px;
+}
+
+.formulario-contenedor h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.formulario label {
+    color: #eeeeee;
+}
+
+.formulario input,
+.formulario textarea,
+.formulario select {
+    background-color: #121212;
+    color: #eeeeee;
+    border: 1px solid #444;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 14px;
+}
+
+.formulario input:focus,
+.formulario textarea:focus,
+.formulario select:focus {
+    outline: none;
+    border-color: #4da6ff;
+}
+
+.formulario button {
+    background-color: #2878c7;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.formulario button:hover {
+    background-color: #1d5f9e;
+}
+
+.enlace-formulario {
+    text-align: center;
+    margin-top: 20px;
+    color: #aaaaaa;
+}
+
+.enlace-formulario a {
+    color: #4da6ff;
+    text-decoration: none;
+}
+
+.enlace-formulario a:hover {
+    text-decoration: underline;
+}
+
+.mensaje-login {
+    background-color: #1c1c1c;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 15px;
+    color: #aaaaaa;
+    margin-bottom: 25px;
+}
+
+.mensaje-login a {
+    color: #4da6ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.mensaje-login a:hover {
+    text-decoration: underline;
+}
+
+.encabezado-publicaciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.encabezado-publicaciones h2 {
+    margin-bottom: 0;
+}
+
+.boton-publicar {
+    background-color: #2878c7;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    padding: 12px 18px;
+    font-size: 14px;
+}
+
+.boton-publicar:hover {
+    background-color: #1d5f9e;
+}
+
+.encabezado-publicaciones .mensaje-login {
+    margin-bottom: 0;
+}
+
+/* FORMULARIO DE COMENTARIOS */
+
+.formulario-comentario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.formulario-comentario textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 12px;
+    background-color: #121212;
+    color: #eeeeee;
+    border: 1px solid #444;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    resize: vertical;
+}
+
+.formulario-comentario textarea:focus {
+    outline: none;
+    border-color: #4da6ff;
+}
+
+.formulario-comentario button {
+    align-self: flex-start;
+    background-color: #2878c7;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.formulario-comentario button:hover {
+    background-color: #1d5f9e;
+}
+
+
+
+main > h3 {
+    margin: 25px 0 15px;
+    color: #eeeeee;
+}
+
+.comentario {
+    background-color: #1c1c1c;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin-bottom: 12px;
+}
+
+.comentario p {
+    color: #eeeeee;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    overflow-wrap: anywhere;
+}
+
+.comentario .informacion-publicacion {
+    border-top: 1px solid #333;
+    padding-top: 12px;
+    margin-bottom: 0;
+}
+
+.mensaje-exito {
+    background-color: #1c1c1c;
+    color: #7bd88f;
+    border: 1px solid #347a45;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+}
